@@ -91,9 +91,9 @@ router.delete("/api/items", (req, res) => {
 
 // UPDATE an item
 router.put('/api/items/:id', (req, res) => {
-  let id = Number(req.body.id);
-  let title = req.body.title;
-  let author = req.body.author;
+  let id = Number(req.params.id)
+  let title = req.body.title
+  let author = req.body.author
 
   // Find data index
   let itemIndex = data.findIndex((item, index) => {
